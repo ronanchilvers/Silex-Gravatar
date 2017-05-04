@@ -5,14 +5,31 @@ namespace SilexGravatar;
 
 use Silex\Application;
 use Silex\Api\BootableProviderInterface;
+use Pimple\ServiceProviderInterface;
 
 use Gravatar\Service,
     Gravatar\Cache\FilesystemCache,
     Gravatar\Cache\ExpiringCache,
     Gravatar\Extension\Twig\GravatarExtension as TwigGravatarExtension;
 
-class GravatarExtension implements BootableProviderInterface
+class GravatarExtension implements
+    ServiceProviderInterface,
+    BootableProviderInterface
 {
+
+    /**
+     * {@inheritdoc}
+     *
+     * @author Ronan Chilvers <ronan@d3r.com>
+     */
+    public function register(Container $pimple)
+    {
+    }
+
+    /**
+     * @author Michael Heap
+     * @author Sven E
+     */
     public function boot(Application $app)
     {
         $app['gravatar.cache'] = function () use ($app) {
