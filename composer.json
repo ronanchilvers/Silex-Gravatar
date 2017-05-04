@@ -23,8 +23,7 @@
         "mheap/gravatar-php": "1.0.0"
     },
     "require-dev": {
-        "silex/silex": "1.*",
-        "twig/twig": ">=1.2.0",
+        "silex/silex": "2.*",
         "phpunit/phpunit": "^5.4"
     },
     "suggest": {
