@@ -6,6 +6,7 @@ namespace SilexGravatar;
 use Silex\Application;
 use Silex\Api\BootableProviderInterface;
 use Pimple\ServiceProviderInterface;
+use Pimple\Container;
 
 use Gravatar\Service,
     Gravatar\Cache\FilesystemCache,
